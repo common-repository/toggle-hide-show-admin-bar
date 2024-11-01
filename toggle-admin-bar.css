@@ -1,0 +1,36 @@
+#thsabToggleAdminBar {
+  position: fixed;
+  bottom: 20px;
+  padding: 10px;
+  background-color: #000000; /* Default background color */
+  color: #ffffff; /* Default text color */
+  transition: transform 0.25s;
+}
+#thsabToggleAdminBar input {
+  display: none;
+}
+#thsabToggleAdminBar input + label::before {
+  content: "Admin bar shown";
+}
+#thsabToggleAdminBar input:checked + label::before {
+  content: "Admin bar hidden";
+}
+#thsabToggleAdminBar label {
+  color: inherit; /* Use text color from options */
+  font-size: medium;
+}
+#thsabToggleAdminBar label i {
+  margin-left: 10px; /* Gap beetween icon and text */
+}
+#thsabToggleAdminBar label .fa-eye {
+  display: inline-block; /* If input is not checked: show normal eye */
+}
+#thsabToggleAdminBar label .fa-eye-slash {
+  display: none; /* If input is checked: hide normal eye */
+}
+#thsabToggleAdminBar input:checked + label .fa-eye {
+  display: none; /* If input is checked: show slashed eye */
+}
+#thsabToggleAdminBar input:checked + label .fa-eye-slash {
+  display: inline-block; /* If input is not checked: hide slashed eye */
+}
